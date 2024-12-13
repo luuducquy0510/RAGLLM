@@ -28,4 +28,7 @@ cd RAGLLM
 pip install -r requirements.txt
 
 3. Set Up API Key:
-Add your NVIDIA Gemini API key in scripts/generate.py:
+Get your Gemini API KEY from [text](https://aistudio.google.com/app/apikey)
+
+4. Demo:
+Run file gemini.ipynb
