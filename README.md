@@ -20,15 +20,15 @@ This project implement RAG technique to improve the performance of LLM. Retrieva
 
 1. Clone the Repository:
 
-git clone https://github.com/luuducquy0510/RAGLLM.git
-cd RAGLLM
+- git clone https://github.com/luuducquy0510/RAGLLM.git 
+- cd RAGLLM
 
 2. Install Dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 3. Set Up API Key:
-Get your Gemini API KEY from [text](https://aistudio.google.com/app/apikey)
+- Get your Gemini API KEY from [Gemini API KEY](https://aistudio.google.com/app/apikey)
 
 4. Demo:
-Run file gemini.ipynb
+- Run file gemini.ipynb
