@@ -31,4 +31,4 @@ This project implement RAG technique to improve the performance of LLM. Retrieva
 - Get your Gemini API KEY from [Gemini API KEY](https://aistudio.google.com/app/apikey)
 
 4. Demo:
-- Run file gemini.ipynb
+- Run file main.py
