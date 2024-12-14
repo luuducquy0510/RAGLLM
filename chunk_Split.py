@@ -37,8 +37,8 @@ class GetChunk:
     
         df = pd.DataFrame(page_and_chunks)
         min_token_length = 10
-        for row in df[df['chunk_token_count']<= min_token_length].sample(1, replace = True).iterrows():
-            print(f'Chunk token count: {row[1]["chunk_token_count"]} , Text: {row[1]["sentence_chunk"]}')
+        # for row in df[df['chunk_token_count']<= min_token_length].sample(1, replace = True).iterrows():
+        #     print(f'Chunk token count: {row[1]["chunk_token_count"]} , Text: {row[1]["sentence_chunk"]}')
 
         pages_and_chunks_over_min_token_len = df[df["chunk_token_count"] > min_token_length].to_dict(orient="records")
         
