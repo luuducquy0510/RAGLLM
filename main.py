@@ -3,10 +3,14 @@ from RAG import RAG
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+import torch
 load_dotenv()
 
 api_key = os.getenv("Gemini_API")
 file_path = 'data/DemoData.pdf'
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"You are running on {device}")
 
 def print_wrapped(text, wrap_length=80):
     wrapped_text = textwrap.fill(text, wrap_length)
@@ -17,7 +21,7 @@ def LLM(user_input):
     model = genai.GenerativeModel("gemini-1.5-flash")
     message = f"""
 "You are an AI assistant that answers questions.",
-"You are a very honest person, never make up answer from what you do not know. If you do not know the answer, say exactly I DO NOT KNOW!".
+"You are a very honest person, never make up answer from what you do not know. When and only when you do not know the answer, say exactly I DO NOT KNOW!".
 "content": {user_input}
 """
     response = model.generate_content(message).text
